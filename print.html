@@ -3,13 +3,12 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Learn @lnp2pBot</title>
+        <title>Apprendre @lnp2pBot</title>
         <meta name="robots" content="noindex" />
 
 
         <!-- Custom HTML head -->
         
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -34,14 +33,15 @@
 
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -57,7 +57,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -69,12 +69,14 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -82,16 +84,38 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">@lnp2pBot</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">1.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="what-is-lnp2pbot.html"><strong aria-hidden="true">2.</strong> Qu'est-ce que @lnp2pBot ?</a></li><li class="chapter-item expanded "><a href="what-is-lightning-network.html"><strong aria-hidden="true">3.</strong> Qu'est-ce que Lightning Network ?</a></li><li class="chapter-item expanded "><a href="what-do-i-need-to-use-lnp2pbot.html"><strong aria-hidden="true">4.</strong> De quoi ai-je besoin pour utiliser @lnp2pBot ?</a></li><li class="chapter-item expanded "><a href="how-do-i-initialize-the-bot.html"><strong aria-hidden="true">5.</strong> Comment initialiser le bot ?</a></li><li class="chapter-item expanded "><a href="what-are-the-channels-to-make-exchanges-on-telegram.html"><strong aria-hidden="true">6.</strong> Quels sont les canaux pour faire des échanges sur Telegram ?</a></li><li class="chapter-item expanded "><a href="where-i-can-find-offers-for-my-local-currency.html"><strong aria-hidden="true">7.</strong> Où puis-je trouver des offres pour ma devise locale ?</a></li><li class="chapter-item expanded "><a href="do-i-need-to-fill-out-any-user-registration-or-identity-verification.html"><strong aria-hidden="true">8.</strong> Dois-je remplir un formulaire d'inscription ou de vérification d'identité ?</a></li><li class="chapter-item expanded "><a href="what-type-of-information-do-you-collect-from-each-user.html"><strong aria-hidden="true">9.</strong> Quel type d'informations recueillez-vous auprès de chaque utilisateur ?</a></li><li class="chapter-item expanded "><a href="how-does-the-user-reputation-system-work.html"><strong aria-hidden="true">10.</strong> Comment fonctionne le système de réputation des utilisateurs ?</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-sell-order.html"><strong aria-hidden="true">11.</strong> Comment créer une offre de vente ?</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-purchase-order.html"><strong aria-hidden="true">12.</strong> Comment créer un offre d'achat ?</a></li><li class="chapter-item expanded "><a href="how-do-i-find-and-accept-an-offer-to-buy-or-sell.html"><strong aria-hidden="true">13.</strong> Comment trouver et accepter une offre d'achat ou de vente ?</a></li><li class="chapter-item expanded "><a href="how-do-i-cancel-a-posted-order.html"><strong aria-hidden="true">14.</strong> Comment annuler une offre publiée ?</a></li><li class="chapter-item expanded "><a href="is-there-a-limit-on-the-amounts-i-can-trade.html"><strong aria-hidden="true">15.</strong> Y a-t-il une limite (minimum ou maximum) aux montants que je peux négocier ?</a></li><li class="chapter-item expanded "><a href="how-long-does-it-take-to-finalize-a-transaction.html"><strong aria-hidden="true">16.</strong> Combien de temps faut-il pour finaliser une transaction ?</a></li><li class="chapter-item expanded "><a href="fees-and-commissions.html"><strong aria-hidden="true">17.</strong> Frais et commissions</a></li><li class="chapter-item expanded "><a href="what-exchange-rate-does-the-bot-use.html"><strong aria-hidden="true">18.</strong> Quel cours de change le robot utilise-t-il ?</a></li><li class="chapter-item expanded "><a href="in-which-countries-is-it-available.html"><strong aria-hidden="true">19.</strong> Dans quels pays est-il disponible ?</a></li><li class="chapter-item expanded "><a href="community-find.html"><strong aria-hidden="true">20.</strong> Comment trouver des communautés fonctionnant avec ma devise ?</a></li><li class="chapter-item expanded "><a href="recommended-wallets.html"><strong aria-hidden="true">21.</strong> Portefeuilles recommandés</a></li><li class="chapter-item expanded "><a href="support.html"><strong aria-hidden="true">22.</strong> Support</a></li><li class="chapter-item expanded "><a href="common-problems-and-solutions.html"><strong aria-hidden="true">23.</strong> Problèmes courants et solutions</a></li><li class="chapter-item expanded "><a href="how-do-i-know-if-seller-released.html"><strong aria-hidden="true">24.</strong> Comment savoir si le vendeur a effectivement libéré les sats ?</a></li><li class="chapter-item expanded "><a href="i-cant-receive.html"><strong aria-hidden="true">25.</strong> Je n'ai pas reçu les sats correspondant à mon achat</a></li><li class="chapter-item expanded "><a href="contact-with-developers.html"><strong aria-hidden="true">26.</strong> Contacter les développeurs</a></li><li class="chapter-item expanded "><a href="i-am-a-developer-and-i-want-to-contribute.html"><strong aria-hidden="true">27.</strong> Je suis un développeur et je veux contribuer</a></li><li class="chapter-item expanded "><a href="communities.html"><strong aria-hidden="true">28.</strong> Communautés</a></li><li class="chapter-item expanded "><a href="trust.html"><strong aria-hidden="true">29.</strong> Confiance</a></li><li class="chapter-item expanded "><a href="benevolent-dictator.html"><strong aria-hidden="true">30.</strong> Dictateur bienveillant</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-community.html"><strong aria-hidden="true">31.</strong> Comment créer une communauté</a></li><li class="chapter-item expanded "><a href="modifying-a-community.html"><strong aria-hidden="true">32.</strong> Modifier une communauté</a></li><li class="chapter-item expanded "><a href="creating-orders.html"><strong aria-hidden="true">33.</strong> Créer des offres</a></li><li class="chapter-item expanded "><a href="incentives.html"><strong aria-hidden="true">34.</strong> Incitations</a></li><li class="chapter-item expanded "><a href="what-is-a-solver.html"><strong aria-hidden="true">35.</strong> Qu'est-ce qu'un médiateur</a></li><li class="chapter-item expanded "><a href="resolving-disputes.html"><strong aria-hidden="true">36.</strong> Résoudre des litiges</a></li><li class="chapter-item expanded "><a href="settle-order.html"><strong aria-hidden="true">37.</strong> Régler une offre</a></li><li class="chapter-item expanded "><a href="cancel-order.html"><strong aria-hidden="true">38.</strong> Annuler une offre</a></li><li class="chapter-item expanded "><a href="removing-disputes.html"><strong aria-hidden="true">39.</strong> Supprimer les litiges</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">@lnp2pBot</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">1.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="what-is-lnp2pbot.html"><strong aria-hidden="true">2.</strong> Qu'est-ce que @lnp2pBot ?</a></li><li class="chapter-item expanded "><a href="what-is-lightning-network.html"><strong aria-hidden="true">3.</strong> Qu'est-ce que Lightning Network ?</a></li><li class="chapter-item expanded "><a href="what-do-i-need-to-use-lnp2pbot.html"><strong aria-hidden="true">4.</strong> De quoi ai-je besoin pour utiliser @lnp2pBot ?</a></li><li class="chapter-item expanded "><a href="how-do-i-initialize-the-bot.html"><strong aria-hidden="true">5.</strong> Comment initialiser le bot ?</a></li><li class="chapter-item expanded "><a href="what-are-the-channels-to-make-exchanges-on-telegram.html"><strong aria-hidden="true">6.</strong> Quels sont les canaux pour faire des échanges sur Telegram ?</a></li><li class="chapter-item expanded "><a href="where-i-can-find-offers-for-my-local-currency.html"><strong aria-hidden="true">7.</strong> Où puis-je trouver des offres pour ma devise locale ?</a></li><li class="chapter-item expanded "><a href="do-i-need-to-fill-out-any-user-registration-or-identity-verification.html"><strong aria-hidden="true">8.</strong> Dois-je remplir un formulaire d'inscription ou de vérification d'identité ?</a></li><li class="chapter-item expanded "><a href="what-type-of-information-do-you-collect-from-each-user.html"><strong aria-hidden="true">9.</strong> Quel type d'informations recueillez-vous auprès de chaque utilisateur ?</a></li><li class="chapter-item expanded "><a href="how-does-the-user-reputation-system-work.html"><strong aria-hidden="true">10.</strong> Comment fonctionne le système de réputation des utilisateurs ?</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-sell-order.html"><strong aria-hidden="true">11.</strong> Comment créer une offre de vente ?</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-purchase-order.html"><strong aria-hidden="true">12.</strong> Comment créer une offre d'achat ?</a></li><li class="chapter-item expanded "><a href="how-do-i-find-and-accept-an-offer-to-buy-or-sell.html"><strong aria-hidden="true">13.</strong> Comment trouver et accepter une offre d'achat ou de vente ?</a></li><li class="chapter-item expanded "><a href="how-do-i-cancel-a-posted-order.html"><strong aria-hidden="true">14.</strong> Comment annuler une offre publiée ?</a></li><li class="chapter-item expanded "><a href="is-there-a-limit-on-the-amounts-i-can-trade.html"><strong aria-hidden="true">15.</strong> Y a-t-il une limite (minimum ou maximum) aux montants que je peux négocier ?</a></li><li class="chapter-item expanded "><a href="how-long-does-it-take-to-finalize-a-transaction.html"><strong aria-hidden="true">16.</strong> Combien de temps faut-il pour finaliser une transaction ?</a></li><li class="chapter-item expanded "><a href="fees-and-commissions.html"><strong aria-hidden="true">17.</strong> Frais et commissions</a></li><li class="chapter-item expanded "><a href="what-exchange-rate-does-the-bot-use.html"><strong aria-hidden="true">18.</strong> Quel cours de change le robot utilise-t-il ?</a></li><li class="chapter-item expanded "><a href="in-which-countries-is-it-available.html"><strong aria-hidden="true">19.</strong> Dans quels pays est-il disponible ?</a></li><li class="chapter-item expanded "><a href="community-find.html"><strong aria-hidden="true">20.</strong> Comment trouver des communautés fonctionnant avec ma devise ?</a></li><li class="chapter-item expanded "><a href="recommended-wallets.html"><strong aria-hidden="true">21.</strong> Portefeuilles recommandés</a></li><li class="chapter-item expanded "><a href="support.html"><strong aria-hidden="true">22.</strong> Support</a></li><li class="chapter-item expanded "><a href="common-problems-and-solutions.html"><strong aria-hidden="true">23.</strong> Problèmes fréquents et solutions</a></li><li class="chapter-item expanded "><a href="how-do-i-know-if-seller-released.html"><strong aria-hidden="true">24.</strong> Comment savoir si le vendeur a effectivement libéré les sats ?</a></li><li class="chapter-item expanded "><a href="i-cant-receive.html"><strong aria-hidden="true">25.</strong> Je n'ai pas reçu les sats correspondant à mon achat</a></li><li class="chapter-item expanded "><a href="contact-with-developers.html"><strong aria-hidden="true">26.</strong> Contacter les développeurs</a></li><li class="chapter-item expanded "><a href="i-am-a-developer-and-i-want-to-contribute.html"><strong aria-hidden="true">27.</strong> Je suis un développeur et je veux contribuer</a></li><li class="chapter-item expanded "><a href="communities.html"><strong aria-hidden="true">28.</strong> Communautés</a></li><li class="chapter-item expanded "><a href="trust.html"><strong aria-hidden="true">29.</strong> Confiance</a></li><li class="chapter-item expanded "><a href="benevolent-dictator.html"><strong aria-hidden="true">30.</strong> Dictateur bienveillant</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-community.html"><strong aria-hidden="true">31.</strong> Comment créer une communauté</a></li><li class="chapter-item expanded "><a href="modifying-a-community.html"><strong aria-hidden="true">32.</strong> Modifier une communauté</a></li><li class="chapter-item expanded "><a href="creating-orders.html"><strong aria-hidden="true">33.</strong> Créer des offres</a></li><li class="chapter-item expanded "><a href="incentives.html"><strong aria-hidden="true">34.</strong> Incitations</a></li><li class="chapter-item expanded "><a href="what-is-a-solver.html"><strong aria-hidden="true">35.</strong> Qu'est-ce qu'un médiateur</a></li><li class="chapter-item expanded "><a href="resolving-disputes.html"><strong aria-hidden="true">36.</strong> Résoudre des litiges</a></li><li class="chapter-item expanded "><a href="settle-order.html"><strong aria-hidden="true">37.</strong> Régler une offre</a></li><li class="chapter-item expanded "><a href="cancel-order.html"><strong aria-hidden="true">38.</strong> Annuler une offre</a></li><li class="chapter-item expanded "><a href="removing-disputes.html"><strong aria-hidden="true">39.</strong> Supprimer les litiges</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                                 <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
@@ -100,7 +124,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -111,7 +135,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Learn @lnp2pBot</h1>
+                    <h1 class="menu-title">Apprendre @lnp2pBot</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -133,7 +157,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -148,7 +172,7 @@
 <h2 id="guide-de-démarrage-rapide"><a class="header" href="#guide-de-démarrage-rapide">Guide de démarrage rapide</a></h2>
 <ol>
 <li>
-<p>Téléchargez un portefeuille compatible avec le Lightning Network (<a href="./recommended-wallets.html">Recomended wallets</a>).</p>
+<p>Téléchargez un portefeuille compatible avec le Lightning Network (<a href="./recommended-wallets.html">Portefeuilles recommandés</a>).</p>
 </li>
 <li>
 <p>Obtenez un nom d'utilisateur Telegram.</p>
@@ -225,7 +249,7 @@
 <p>L'échange est terminé. Vous pouvez maintenant évaluer votre contrepartie.</p>
 <p>Vous pouvez quitter l'assistant à tout moment en exécutant la commande <code>/exit</code>.</p>
 <p>Pour exécuter le même ordre de vente, sans utiliser l'assistant, vous devez taper votre ordre avec les informations suivantes : <code>/sell &lt;montant en sats&gt; &lt;montant en fiat&gt; &lt;code fiat&gt; &lt;mode de paiement&gt; [premium/discount]</code> (sans les caractères spéciaux).</p>
-<p>Exemple : <code>/sell 100000 50 USD &quot;bank xyz&quot;</code> Je vends cent mille sats à cinquante dollars que je via la banque xyz.</p>
+<p>Exemple : <code>/sell 100000 20000 XOF &quot;Société Géniale Bank&quot;</code> Je vends 100.000 sats à 20.000 F que je reçois via Société Géniale Bank.</p>
 <p>Si une variable n'est pas prise en charge, le robot vous l'indiquera au cours du processus de création de l'offre. Une fois terminé, l'ordre sera publié sur le canal d'échange et sera visible pendant une période de 23 heures.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comment-créer-une-offre-dachat-"><a class="header" href="#comment-créer-une-offre-dachat-">Comment créer une offre d'achat ?</a></h1>
 <p>La procédure est la même que pour l'offre de vente. Seulement, lorsque vous appuyez sur le bouton &quot;Menu&quot;, vous devez sélectionner la commande <code>/buy</code> au lieu de <code>/sell</code>. Cela activera l'assistant qui vous guidera tout au long du processus d'achat.</p>
@@ -252,13 +276,13 @@
 <p>L'échange est terminé. Vous pouvez maintenant évaluer votre contrepartie.</p>
 <p>Vous pouvez quitter l'assistant à tout moment en exécutant la commande <code>/exit</code>.</p>
 <p>Pour exécuter la même offre d'achat, sans utiliser l'assistant, vous devez écrire votre commande avec les détails : <code>/achat</code><montant en sats> <montant en fiat> <code fiat> <mode de paiement> [surcote/ décote] (sans les caractères spéciaux).</p>
-<p>Exemple : <code>/buy 100000 50 USD &quot;xyz bank&quot;</code>.</p>
-<p>J'achète cent mille sats à cinquante dollars, payés avec la banque xyz.</p>
+<p>Exemple : <code>/buy 100000 20000 XOF &quot;Société Géniale Bank&quot;</code>.</p>
+<p>J'achète 100.000 sats à 20.000 F, payés avec la banque Société Géniale Bank.</p>
 <p>Voici quelques exemples d'offres d'achat :</p>
 <ul>
-<li>Ex. <code>/buy 0 50 ves &quot;xyz bank&quot;</code> : J'achète cinquante bolivars en sats - dans ce cas, le robot calculera au taux du marché - paiement via la banque xyz.</li>
-<li>Ex. <code>/buy 0 10-100 pen &quot;mobile payment&quot;</code> : J'achète de 10 à 100 nuevos soles - dans ce cas, le vendeur choisira le montant à vous vendre dans cette fourchette - par paiement mobile.</li>
-<li>Ex. <code>/buy 0 100 eur -3 &quot;mobile payment&quot;</code> : J'achète 100 euros avec une remise de 3 % - dans ce cas, le robot calculera au taux du marché en décotant le pourcentage que vous avez choisi - par paiement mobile.</li>
+<li>Ex. <code>/buy 0 20000 &quot;Société Géniale Bank&quot;</code> : J'achète pour 20.000 F en sats - dans ce cas, le robot calculera au taux du marché - paiement via la banque Société Géniale Bank.</li>
+<li>Ex. <code>/buy 0 1000-20000 &quot;Mobile Money&quot;</code> : J'achète de 1.000 F à 20.000 F en sats - dans ce cas, le vendeur choisira le montant à vous vendre dans cette fourchette - par paiement mobile.</li>
+<li>Ex. <code>/buy 0 5000000 XOF &quot;Cash RDV Prima Mall 16h UTC&quot; +3</code> : J'achète 5.000.000 F avec une surcôte (premium) de 3 % - dans ce cas, le robot calculera au taux du marché en décotant le pourcentage que vous avez choisi - par paiement en cash sur rendez-vous au centre commercial Prima à 16h.</li>
 </ul>
 <p>S'il existe une variable non prise en charge, le bot vous l'indiquera au cours du processus de création de l'offre. Une fois terminé, l'offre sera automatiquement publiée sur le canal d'échange et sera visible pendant 23 heures.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comment-trouver-et-accepter-une-offre-dachat-ou-de-vente-"><a class="header" href="#comment-trouver-et-accepter-une-offre-dachat-ou-de-vente-">Comment trouver et accepter une offre d'achat ou de vente ?</a></h1>
@@ -280,46 +304,69 @@
 <p>Lorsque vous créez une offre, vous pouvez choisir de ne spécifier que la somme en fiat à <code>payer/facturer</code>, mais pas la somme en sats à <code>acheter/vendre</code>. Dans ce cas, vous devez sélectionner le bouton &quot;Prix du marché&quot;, et le bot calculera alors au taux du marché offert par <a href="https://yadio.io/">yadio.io</a>.</p>
 <p><img src="./assets/images/market-price.gif" alt="prix du marché" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dans-quels-pays-et-dans-quelles-langues-est-il-disponible-"><a class="header" href="#dans-quels-pays-et-dans-quelles-langues-est-il-disponible-">Dans quels pays et dans quelles langues est-il disponible ?</a></h1>
-<p>Comme il s'agit d'un échange P2P sur Telegram, il est techniquement accessible à tous ceux qui possèdent l'application. Cependant, à ce jour, le robot peut obtenir le cours de 58 devises avec lesquelles vous pouvez créer des ordres d'achat/vente en utilisant le bouton &quot;prix de marché&quot; lors de la création d'une offre avec l'assistant.</p>
+<p>Comme il s'agit d'un échange P2P sur Telegram, il est techniquement accessible à tous ceux qui possèdent l'application. Cependant, à ce jour, le robot peut obtenir le cours de 91 devises avec lesquelles vous pouvez créer des ordres d'achat/vente en utilisant le bouton &quot;prix de marché&quot; lors de la création d'une offre avec l'assistant.</p>
 <p>Nous vous présentons ici la liste des devises :</p>
-<table><thead><tr><th>Code</th><th>Name</th><th></th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Code</th><th>Name</th><th>Flag</th></tr></thead><tbody>
 <tr><td>AED</td><td>United Arab Emirates Dirham</td><td>🇦🇪</td></tr>
+<tr><td>ANG</td><td>Netherland Antillean Guilder</td><td>🇧🇶</td></tr>
+<tr><td>AOA</td><td>Angola Kwanza</td><td>🇦🇴</td></tr>
 <tr><td>ARS</td><td>Peso argentino</td><td>🇦🇷</td></tr>
 <tr><td>AUD</td><td>Australian Dollar</td><td>🇦🇺</td></tr>
 <tr><td>AZN</td><td>Azerbaijani Manat</td><td>🇦🇿</td></tr>
+<tr><td>BDT</td><td>Bangladeshi Taka</td><td>🇧🇩</td></tr>
+<tr><td>BHD</td><td>Bahraini Dinar</td><td>🇧🇭</td></tr>
+<tr><td>BIF</td><td>Burundian Franc</td><td>🇧🇭</td></tr>
+<tr><td>BMD</td><td>Bermudan Dollar</td><td>🇧🇲</td></tr>
 <tr><td>BOB</td><td>Boliviano</td><td>🇧🇴</td></tr>
 <tr><td>BRL</td><td>Brazilian Real</td><td>🇧🇷</td></tr>
+<tr><td>BWP</td><td>Botswana Pula</td><td>🇧🇼</td></tr>
 <tr><td>BYN</td><td>Belarusian Ruble</td><td>🇧🇾</td></tr>
 <tr><td>CHF</td><td>Swiss Franc</td><td>🇨🇭</td></tr>
 <tr><td>CAD</td><td>Canadian Dollar</td><td>🇨🇦</td></tr>
+<tr><td>CDF</td><td>Congolese Franc</td><td>🇨🇩</td></tr>
 <tr><td>CLP</td><td>Peso chileno</td><td>🇨🇱</td></tr>
 <tr><td>CNY</td><td>Chinese Yuan</td><td>🇨🇳</td></tr>
 <tr><td>COP</td><td>Peso colombiano</td><td>🇨🇴</td></tr>
 <tr><td>CRC</td><td>Colón</td><td>🇨🇷</td></tr>
 <tr><td>CUP</td><td>Peso cubano</td><td>🇨🇺</td></tr>
 <tr><td>CZK</td><td>Czech Republic Koruna</td><td>🇨🇿</td></tr>
+<tr><td>DJF</td><td>Djiboutian Franc</td><td>🇩🇯</td></tr>
 <tr><td>DKK</td><td>Danish Krone</td><td>🇩🇰</td></tr>
 <tr><td>DOP</td><td>Peso dominicano</td><td>🇩🇴</td></tr>
+<tr><td>DZD</td><td>Algerian Dinar</td><td>🇩🇿</td></tr>
+<tr><td>EGP</td><td>Egyptian Pound</td><td>🇪🇬</td></tr>
+<tr><td>ETB</td><td>Ethiopian Birr</td><td>🇪🇹</td></tr>
 <tr><td>EUR</td><td>Euro</td><td>🇪🇺</td></tr>
 <tr><td>GBP</td><td>British Pound Sterling</td><td>🇬🇧</td></tr>
 <tr><td>GEL</td><td>Georgian Lari</td><td>🇬🇪</td></tr>
 <tr><td>GHS</td><td>Ghanaian Cedi</td><td>🇬🇭</td></tr>
+<tr><td>GNF</td><td>Guinean Franc</td><td>🇬🇳</td></tr>
 <tr><td>GTQ</td><td>Quetzal</td><td>🇬🇹</td></tr>
 <tr><td>HKD</td><td>Hong Kong Dollar</td><td>🇭🇰</td></tr>
 <tr><td>HUF</td><td>Hungarian Forint</td><td>🇭🇺</td></tr>
+<tr><td>HNL</td><td>Honduran Lempira</td><td>🇭🇳</td></tr>
 <tr><td>IDR</td><td>Indonesian Rupiah</td><td>🇮🇩</td></tr>
 <tr><td>ILS</td><td>Israeli New Sheqel</td><td>🇮🇱</td></tr>
 <tr><td>INR</td><td>Indian Rupee</td><td>🇮🇳</td></tr>
 <tr><td>JMD</td><td>Jamaican Dollar</td><td>🇯🇲</td></tr>
 <tr><td>JPY</td><td>Japanese Yen</td><td>🇯🇵</td></tr>
+<tr><td>JOD</td><td>Jordanian Dinar</td><td>🇯🇴</td></tr>
 <tr><td>KES</td><td>Kenyan Shilling</td><td>🇰🇪</td></tr>
+<tr><td>KGS</td><td>Kyrgystani Som</td><td>🇰🇬</td></tr>
 <tr><td>KRW</td><td>South Korean Won</td><td>🇰🇷</td></tr>
 <tr><td>KZT</td><td>Kazakhstani Tenge</td><td>🇰🇿</td></tr>
+<tr><td>LBP</td><td>Lebanese Pound</td><td>🇱🇧</td></tr>
+<tr><td>LKR</td><td>Sri Lankan Rupee</td><td>🇱🇰</td></tr>
+<tr><td>MAD</td><td>Moroccan Dirham</td><td>🇲🇦</td></tr>
+<tr><td>MGA</td><td>Malagasy Ariary</td><td>🇲🇬</td></tr>
+<tr><td>MLC</td><td>Moneda Libremente Convert.</td><td>🇨🇺</td></tr>
 <tr><td>MXN</td><td>Peso mexicano</td><td>🇲🇽</td></tr>
 <tr><td>MYR</td><td>Malaysian Ringgit</td><td>🇲🇾</td></tr>
 <tr><td>NAD</td><td>Namibian Dollar</td><td>🇳🇦</td></tr>
 <tr><td>NGN</td><td>Nigerian Naira</td><td>🇳🇬</td></tr>
+<tr><td>NIO</td><td>Nicaraguan Córdoba</td><td>🇳🇮</td></tr>
 <tr><td>NOK</td><td>Norwegian Krone</td><td>🇳🇴</td></tr>
+<tr><td>NPR</td><td>Nzepalese Rupee</td><td>🇳🇵</td></tr>
 <tr><td>NZD</td><td>New Zealand Dollar</td><td>🇳🇿</td></tr>
 <tr><td>PAB</td><td>Panamanian Balboa</td><td>🇵🇦</td></tr>
 <tr><td>PEN</td><td>Peruvian Nuevo Sol</td><td>🇵🇪</td></tr>
@@ -329,20 +376,31 @@
 <tr><td>PYG</td><td>Paraguayan Guarani</td><td>🇵🇾</td></tr>
 <tr><td>QAR</td><td>Qatari Rial</td><td>🇶🇦</td></tr>
 <tr><td>RON</td><td>Romanian Leu</td><td>🇷🇴</td></tr>
+<tr><td>RSD</td><td>Serbian Dinar</td><td>🇷🇸</td></tr>
 <tr><td>RUB</td><td>Russian Ruble</td><td>🇷🇺</td></tr>
+<tr><td>RWF</td><td>Rwandan Franc</td><td>🇷🇼</td></tr>
 <tr><td>SAR</td><td>Saudi Riyal</td><td>🇸🇦</td></tr>
 <tr><td>SEK</td><td>Swedish Krona</td><td>🇸🇪</td></tr>
 <tr><td>SGD</td><td>Singapore Dollar</td><td>🇸🇬</td></tr>
+<tr><td>THB</td><td>Thai Baht</td><td>🇹🇭</td></tr>
+<tr><td>TND</td><td>Tunisian Dinar</td><td>🇹🇳</td></tr>
 <tr><td>TRY</td><td>Turkish Lira</td><td>🇹🇷</td></tr>
 <tr><td>TTD</td><td>Trinidad and Tobago Dollar</td><td>🇹🇹</td></tr>
+<tr><td>TWD</td><td>New Taiwan Dollar</td><td>🇹🇼</td></tr>
+<tr><td>TZS</td><td>Tanzanian Shilling</td><td>🇹🇿</td></tr>
 <tr><td>UAH</td><td>Ukrainian Hryvnia</td><td>🇺🇦</td></tr>
+<tr><td>UGX</td><td>Ugandan Shilling</td><td>🇺🇬</td></tr>
 <tr><td>USD</td><td>US Dollar</td><td>🇺🇸</td></tr>
 <tr><td>UYU</td><td>Peso uruguayo</td><td>🇺🇾</td></tr>
+<tr><td>UZS</td><td>Uzbekistan Som</td><td>🇺🇬</td></tr>
 <tr><td>VES</td><td>Bolívar</td><td>🇻🇪</td></tr>
 <tr><td>VND</td><td>Vietnamese Dong</td><td>🇻🇳</td></tr>
+<tr><td>XAF</td><td>CFA Franc BEAC</td><td>🇨🇲🇨🇫🇨🇬🇬🇦🇬🇶🇹🇩</td></tr>
+<tr><td>XOF</td><td>CFA Franc BCEAO</td><td>🇹🇩🇧🇫🇨🇮🇬🇼🇲🇱🇳🇪🇸🇳🇹🇬</td></tr>
 <tr><td>ZAR</td><td>South African Rand</td><td>🇿🇦</td></tr>
 </tbody></table>
-<p>Jusqu'à présent, <a href="https://t.me/lnp2pbot"><strong>@lnp2pBot</strong></a> est entièrement disponible en anglais et en espagnol et en français. Il existe une traduction partielle (en cours) en portugais.</p>
+</div>
+<p>Jusqu'à présent, <a href="https://t.me/lnp2pbot"><strong>@lnp2pBot</strong></a> est entièrement disponible en anglais, en espagnol et en français. Il existe une traduction partielle (en cours) en portugais.</p>
 <p>Pour changer la langue de l'assistant, utilisez la commande <code>/setlang</code>.</p>
 <p>Si vous voulez aider à traduire <strong>lnp2pBot</strong> dans votre langue, vous pouvez proposer votre collaboration. <a href="https://github.com/lnp2pBot/bot/blob/10af43b1199a163f8d8ec79e66546f4ad514ff46/CONTRIBUTING.md">C'est un bon point de départ.</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comment-puis-je-trouver-des-communautés-opérant-avec-ma-devise-"><a class="header" href="#comment-puis-je-trouver-des-communautés-opérant-avec-ma-devise-">Comment puis-je trouver des communautés opérant avec ma devise ?</a></h1>
@@ -352,6 +410,7 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="portefeuilles-recommandés"><a class="header" href="#portefeuilles-recommandés">Portefeuilles recommandés</a></h1>
 <p>Les portefeuilles suivants sont ceux qui ont montré de meilleures performances lorsqu'ils ont été testés avec le bot :</p>
 <ul>
+<li><a href="https://www.walletofsatoshi.com/">Wallet of Satoshi</a></li>
 <li><a href="https://breez.technology/">Breez Wallet</a></li>
 <li><a href="https://phoenix.acinq.co/">Phoenix Wallet</a></li>
 <li><a href="https://blixtwallet.github.io/">Blixt Wallet</a></li>
@@ -367,7 +426,7 @@
 <h2 id="un-utilisateur-a-pris-mon-offre-par-erreur-alors-que-javais-déjà-effectué-le-paiement-en-satoshis"><a class="header" href="#un-utilisateur-a-pris-mon-offre-par-erreur-alors-que-javais-déjà-effectué-le-paiement-en-satoshis">Un utilisateur a pris mon offre par erreur alors que j'avais déjà effectué le paiement en satoshis.</a></h2>
 <p>Une annulation coopérative peut être initiée. L'initiateur doit exécuter la commande <code>/cancel &lt;ID de l'offre&gt;</code> et la contrepartie n'a qu'à exécuter <code>/cancel</code> et confirmer.</p>
 <h2 id="jai-annulé-une-commande-mais-les-sats-ne-sont-pas-revenus-dans-mon-portefeuille-combien-de-temps-dois-je-attendre-"><a class="header" href="#jai-annulé-une-commande-mais-les-sats-ne-sont-pas-revenus-dans-mon-portefeuille-combien-de-temps-dois-je-attendre-">J'ai annulé une commande mais les sats ne sont pas revenus dans mon portefeuille, combien de temps dois-je attendre ?</a></h2>
-<p>Lorsqu'une commande est annulée, les sats du vendeur retournent immédiatement au nœud/portefeuille qui a effectué le paiement. Si vous utilisez un portefeuille à auto-détention (self-cusdodial) ou bien votre propre nœud, vous n'aurez aucun problème. Si vous utilisez un portefeuille qui héberge vos fonds (custodial), vous devez attendre qu'il reflète votre solde dans son système interne, ce qui peut prendre de quelques minutes à quelques heures selon le portefeuille, mais dans tous les cas, 100 % de vos fonds vous seront rendus, soyez patient.</p>
+<p>Lorsqu'une commande est annulée, les sats du vendeur retournent immédiatement au nœud/portefeuille qui a effectué le paiement. Si vous utilisez un portefeuille à auto-détention (self-custodial) ou bien votre propre nœud, vous n'aurez aucun problème. Si vous utilisez un portefeuille qui héberge vos fonds (custodial), vous devez attendre qu'il reflète votre solde dans son système interne, ce qui peut prendre de quelques minutes à quelques heures selon le portefeuille, mais dans tous les cas, 100 % de vos fonds vous seront rendus, soyez patient.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comment-puis-je-savoir-si-le-vendeur-a-réellement-libéré-les-sats-"><a class="header" href="#comment-puis-je-savoir-si-le-vendeur-a-réellement-libéré-les-sats-">Comment puis-je savoir si le vendeur a réellement libéré les sats ?</a></h1>
 <p>Si @lnp2pBot vous dit que le vendeur a libéré les sats, c'est vraiment le cas, mais si vous voulez le vérifier, vous pouvez le faire de la manière suivante :</p>
 <p>Ecrivez au bot <code>/listorders</code> et si le bot est encore en train de régler votre facture, le statut que vous verrez sera <code>PAID_HOLD_INVOICE</code>, si le bot a déjà réglé la facture, la commande n'apparaîtra pas sur la liste.</p>
@@ -383,7 +442,7 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="communautés"><a class="header" href="#communautés">Communautés</a></h1>
 <p>Les communautés ont été conçues pour que les utilisateurs puissent échanger au sein de petits groupes, adaptés à leurs goûts et à leurs besoins.</p>
 <p>Les communautés peuvent être créées autour d'un projet, d'une devise ou d'un pays, par exemple.</p>
-<p>N'importe qui peut créer une communauté et interagir avec le bot qui en fait partie. Un grand pouvoir s'accompagne de grandes responsabilités&quot;. Ainsi, une fois que les utilisateurs commenceront à fonctionner dans leurs propres communautés, ils devront également gérer les litiges qui risquent de survenir.</p>
+<p>N'importe qui peut créer une communauté et interagir avec le bot qui en fait partie. &quot;Un grand pouvoir s'accompagne de grandes responsabilités&quot;. Ainsi, une fois que les utilisateurs commenceront à fonctionner dans leurs propres communautés, ils devront également gérer les litiges qui risquent de survenir.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="la-confiance"><a class="header" href="#la-confiance">La confiance</a></h1>
 <p>Le modèle que nous avons choisi pour résoudre les litiges est celui de la confiance. Cela semble paradoxal pour ceux qui travaillent avec Bitcoin et qui prônent des systèmes &quot;sans confiance&quot;. En réalité, l'objectif est de développer des systèmes dans lesquels nous n'avons pas besoin de faire confiance à qui que ce soit. Mais après avoir longuement réfléchi aux systèmes de résolution des litiges, nous avons dû accepter le fait qu'il faut toujours faire confiance à quelqu'un, dans une certaine mesure.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dictateur-bienveillant"><a class="header" href="#dictateur-bienveillant">Dictateur bienveillant</a></h1>
@@ -393,7 +452,7 @@
 <p>Pour créer une communauté, tapez simplement la commande <code>/community</code>. Ensuite, le bot vous demandera d'indiquer les éléments suivants :</p>
 <ul>
 <li>Nom de la communauté : Un nom pour identifier votre communauté.</li>
-<li>Devises : Les monnaies fiat qui peuvent fonctionner dans la communauté. Elles doivent être saisies séparément d'un espace vide. Par exemple, pour une communauté uruguayenne, on peut ajouter &quot;UYU USD&quot;.</li>
+<li>Devises : Les monnaies fiat qui peuvent fonctionner dans la communauté. Elles doivent être saisies séparément d'un espace vide. Par exemple, pour une communauté ukrainienne, on peut ajouter &quot;UAH USD&quot;.</li>
 <li>Groupe communautaire : Il s'agit du groupe principal où les membres de la communauté se rencontrent. Tant <a href="https://t.me/lnp2pbot">@lnp2pbot</a> que la personne qui crée la communauté doivent être administrateurs de ce groupe. Les utilisateurs pourront créer des offres en envoyant des commandes au bot dans ce groupe.</li>
 <li>Canal(s) du carnet d'ordres : Les offres seront publiés à l'endroit indiqué au bot. Si on indique un seul canal, les achats et les ventes seront publiés dans ce canal, mais si on indique deux canaux, les achats seront publiés dans le premier et les ventes dans le second. Les canaux sont saisis séparément avec un espace vide et le bot et le créateur de la communauté doivent tous deux être des administrateurs de canal.</li>
 <li>Médiateurs : Il faut indiquer les &quot;usernames&quot; des utilisateurs qui seront chargés de résoudre les litiges, séparés par un espace vide.</li>
@@ -403,12 +462,12 @@
 <p>Pour modifier n'importe quel champ, il suffit d'exécuter la commande <code>/mycomms</code> et le bot vous montrera un menu qui vous aidera à sélectionner la communauté que vous voulez modifier et le champ spécifique.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="création-doffres"><a class="header" href="#création-doffres">Création d'offres</a></h1>
 <p>Le fonctionnement du robot demeure exactement le même, par défaut il crée les offres dans un canal global. Mais comme nous avons créé une nouvelle communauté, nous voulons que notre offre soit publiée dans le canal que nous avons associé à la communauté. Il y a deux façons de créer une offres dans la nouvelle communauté.</p>
-<p>Nous entrons dans le canal communautaire (dans le cas de notre exemple, ce serait @p2pZimbabwe) et, au sein du groupe, nous exécutons la commande habituelle : <code>/sell</code> ou <code>/buy</code>.
-Si nous désirons quelque chose de plus privé, nous indiquons au robot notre communauté par défaut en lançant la commande <code>/setcomm</code> @p2pZimbabwe. toutes les offres que vous créerez en privé iront sur le canal correspondant lié à @p2pZimbabwe. Vous pouvez changer de communauté par défaut à tout moment avec la commande <code>/setcomm</code> @Coolercommunity (exemple). Vous pouvez également revenir à l'état initial, où vous n'aviez pas de communauté par défaut, en lançant <code>/setcomm</code> off.</p>
+<p>Nous entrons dans le canal communautaire (dans le cas de notre exemple, ce serait @AfriqueFrancophoneLNP2P) et, au sein du groupe, nous exécutons la commande habituelle : <code>/sell</code> ou <code>/buy</code>.</p>
+<p>Si nous désirons quelque chose de plus privé, nous indiquons au robot notre communauté par défaut en lançant la commande <code>/setcomm</code> @AfriqueFrancophoneLNP2P. toutes les offres que vous créerez en privé iront sur le canal correspondant lié à @AfriqueFrancophoneLNP2P. Vous pouvez changer de communauté par défaut à tout moment avec la commande <code>/setcomm</code> @AfriqueFrancophoneLNP2P (exemple). Vous pouvez également revenir à l'état initial, où vous n'aviez pas de communauté par défaut, en lançant <code>/setcomm</code> off.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="incitations"><a class="header" href="#incitations">Incitations</a></h1>
 <p>Depuis sa création, <a href="https://t.me/lnp2pbot">@lnp2pbot</a> a facturé des frais au vendeur pour chaque transaction complétée, ces frais sont actuellement de 0.6%, maintenant, si la commande a été créée dans une communauté, le bot divise ces frais, une partie demeure pour le bot et l'autre partie sera au profit de la communauté.</p>
 <p>Les proportions sont de 70 % de la commission pour le bot et le reste pour la communauté.</p>
-<p>Ainsi, pour une transaction de 10 000 satoshis, les frais à payer par le vendeur s'élèvent à 60 satoshis. Sur ce montant, 42 satoshis reviennent à roboto et le reste (18 satoshis) à la communauté.</p>
+<p>Ainsi, pour une transaction de 10 000 satoshis, les frais à payer par le vendeur s'élèvent à 60 satoshis. Sur ce montant, 42 satoshis reviennent au robot et le reste (18 satoshis) à la communauté.</p>
 <p>Mais, pour encourager la concurrence, la communauté a le pouvoir de réduire ses &quot;gains&quot;, de sorte qu'au lieu de facturer la totalité des 30 %, elle peut diminuer le pourcentage de ses commissions.</p>
 <p>Dans l'exemple ci-dessus, au lieu de facturer 18 satoshis (100 %), vous pouvez choisir de collecter 9 satoshis (50 %). Les satoshis restants constituent une remise pour le vendeur qui, au lieu de payer 60 satoshis, en paiera 51.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="quest-ce-quun-médiateur-"><a class="header" href="#quest-ce-quun-médiateur-">Qu'est-ce qu'un médiateur ?</a></h1>
@@ -418,7 +477,7 @@ Si nous désirons quelque chose de plus privé, nous indiquons au robot notre co
 <div style="break-before: page; page-break-before: always;"></div><h1 id="résolution-des-litiges"><a class="header" href="#résolution-des-litiges">Résolution des litiges</a></h1>
 <p>Lorsqu'un utilisateur lance un litige, un message est envoyé par le bot au canal des litiges. Seuls les <strong>médiateurs</strong> peuvent s'en saisir en appuyant sur le bouton <strong>Prendre le litige</strong>. Avant de prendre un litige, le médiateur doit s'assurer qu'il/elle a configuré la communauté, pour configurer la communauté, le solver doit exécuter la commande <code>/setcomm @community-group</code>.</p>
 <p><img src="./assets/images/dispute.jpg" alt="Dispute Capture" /></p>
-<p>Une fois que le médiateur a saisi le litige, le bot lui envoie toutes les informations nécessaires pour le résoudre. Le résolveur devra également communiquer avec chaque partie, comprendre ce qui s'est passé et <strong>compléter</strong> la commande ou <strong>l'annuler</strong>.</p>
+<p>Une fois que le médiateur a saisi le litige, le bot lui envoie toutes les informations nécessaires pour le résoudre. Le résolveur devra également communiquer avec chaque partie, comprendre ce qui s'est passé et <strong>valider</strong> la commande ou <strong>l'annuler</strong>.</p>
 <p><img src="./assets/images/dispute-detail.jpg" alt="Dispute details capture" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="régler-une-offre"><a class="header" href="#régler-une-offre">Régler une offre</a></h1>
 <p>De nombreux litiges commencent parce que l'une des deux parties a tardé à répondre à un message, qu'il y a eu un malentendu ou que le paiement a été retardé. Il s'agit de cas simples qui ne nécessitent que de la patience et de l'aide en matière de communication.
@@ -452,26 +511,27 @@ D'autres cas impliquent de la malveillance, par exemple, il peut y avoir un vend
 
 
 
-        <script type="text/javascript">
+        <script>
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
 
-        <script type="text/javascript">
+        <script>
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
 
+    </div>
     </body>
 </html>
