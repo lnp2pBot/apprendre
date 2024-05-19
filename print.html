@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="fr" class="sidebar-visible no-js light">
+<html lang="fr" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Apprendre @lnp2pBot</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -32,7 +32,7 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -62,31 +62,38 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
                 <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">@lnp2pBot</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">1.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="what-is-lnp2pbot.html"><strong aria-hidden="true">2.</strong> Qu'est-ce que @lnp2pBot ?</a></li><li class="chapter-item expanded "><a href="what-is-lightning-network.html"><strong aria-hidden="true">3.</strong> Qu'est-ce que Lightning Network ?</a></li><li class="chapter-item expanded "><a href="what-do-i-need-to-use-lnp2pbot.html"><strong aria-hidden="true">4.</strong> De quoi ai-je besoin pour utiliser @lnp2pBot ?</a></li><li class="chapter-item expanded "><a href="how-do-i-initialize-the-bot.html"><strong aria-hidden="true">5.</strong> Comment initialiser le bot ?</a></li><li class="chapter-item expanded "><a href="what-are-the-channels-to-make-exchanges-on-telegram.html"><strong aria-hidden="true">6.</strong> Quels sont les canaux pour faire des échanges sur Telegram ?</a></li><li class="chapter-item expanded "><a href="where-i-can-find-offers-for-my-local-currency.html"><strong aria-hidden="true">7.</strong> Où puis-je trouver des offres pour ma devise locale ?</a></li><li class="chapter-item expanded "><a href="do-i-need-to-fill-out-any-user-registration-or-identity-verification.html"><strong aria-hidden="true">8.</strong> Dois-je remplir un formulaire d'inscription ou de vérification d'identité ?</a></li><li class="chapter-item expanded "><a href="what-type-of-information-do-you-collect-from-each-user.html"><strong aria-hidden="true">9.</strong> Quel type d'informations recueillez-vous auprès de chaque utilisateur ?</a></li><li class="chapter-item expanded "><a href="how-does-the-user-reputation-system-work.html"><strong aria-hidden="true">10.</strong> Comment fonctionne le système de réputation des utilisateurs ?</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-sell-order.html"><strong aria-hidden="true">11.</strong> Comment créer une offre de vente ?</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-purchase-order.html"><strong aria-hidden="true">12.</strong> Comment créer une offre d'achat ?</a></li><li class="chapter-item expanded "><a href="how-do-i-find-and-accept-an-offer-to-buy-or-sell.html"><strong aria-hidden="true">13.</strong> Comment trouver et accepter une offre d'achat ou de vente ?</a></li><li class="chapter-item expanded "><a href="how-do-i-cancel-a-posted-order.html"><strong aria-hidden="true">14.</strong> Comment annuler une offre publiée ?</a></li><li class="chapter-item expanded "><a href="is-there-a-limit-on-the-amounts-i-can-trade.html"><strong aria-hidden="true">15.</strong> Y a-t-il une limite (minimum ou maximum) aux montants que je peux négocier ?</a></li><li class="chapter-item expanded "><a href="how-long-does-it-take-to-finalize-a-transaction.html"><strong aria-hidden="true">16.</strong> Combien de temps faut-il pour finaliser une transaction ?</a></li><li class="chapter-item expanded "><a href="fees-and-commissions.html"><strong aria-hidden="true">17.</strong> Frais et commissions</a></li><li class="chapter-item expanded "><a href="what-exchange-rate-does-the-bot-use.html"><strong aria-hidden="true">18.</strong> Quel cours de change le robot utilise-t-il ?</a></li><li class="chapter-item expanded "><a href="in-which-countries-is-it-available.html"><strong aria-hidden="true">19.</strong> Dans quels pays est-il disponible ?</a></li><li class="chapter-item expanded "><a href="community-find.html"><strong aria-hidden="true">20.</strong> Comment trouver des communautés fonctionnant avec ma devise ?</a></li><li class="chapter-item expanded "><a href="recommended-wallets.html"><strong aria-hidden="true">21.</strong> Portefeuilles recommandés</a></li><li class="chapter-item expanded "><a href="support.html"><strong aria-hidden="true">22.</strong> Support</a></li><li class="chapter-item expanded "><a href="common-problems-and-solutions.html"><strong aria-hidden="true">23.</strong> Problèmes fréquents et solutions</a></li><li class="chapter-item expanded "><a href="how-do-i-know-if-seller-released.html"><strong aria-hidden="true">24.</strong> Comment savoir si le vendeur a effectivement libéré les sats ?</a></li><li class="chapter-item expanded "><a href="i-cant-receive.html"><strong aria-hidden="true">25.</strong> Je n'ai pas reçu les sats correspondant à mon achat</a></li><li class="chapter-item expanded "><a href="contact-with-developers.html"><strong aria-hidden="true">26.</strong> Contacter les développeurs</a></li><li class="chapter-item expanded "><a href="i-am-a-developer-and-i-want-to-contribute.html"><strong aria-hidden="true">27.</strong> Je suis un développeur et je veux contribuer</a></li><li class="chapter-item expanded "><a href="communities.html"><strong aria-hidden="true">28.</strong> Communautés</a></li><li class="chapter-item expanded "><a href="trust.html"><strong aria-hidden="true">29.</strong> Confiance</a></li><li class="chapter-item expanded "><a href="benevolent-dictator.html"><strong aria-hidden="true">30.</strong> Dictateur bienveillant</a></li><li class="chapter-item expanded "><a href="how-do-i-create-a-community.html"><strong aria-hidden="true">31.</strong> Comment créer une communauté</a></li><li class="chapter-item expanded "><a href="modifying-a-community.html"><strong aria-hidden="true">32.</strong> Modifier une communauté</a></li><li class="chapter-item expanded "><a href="creating-orders.html"><strong aria-hidden="true">33.</strong> Créer des offres</a></li><li class="chapter-item expanded "><a href="incentives.html"><strong aria-hidden="true">34.</strong> Incitations</a></li><li class="chapter-item expanded "><a href="what-is-a-solver.html"><strong aria-hidden="true">35.</strong> Qu'est-ce qu'un médiateur</a></li><li class="chapter-item expanded "><a href="resolving-disputes.html"><strong aria-hidden="true">36.</strong> Résoudre des litiges</a></li><li class="chapter-item expanded "><a href="settle-order.html"><strong aria-hidden="true">37.</strong> Régler une offre</a></li><li class="chapter-item expanded "><a href="cancel-order.html"><strong aria-hidden="true">38.</strong> Annuler une offre</a></li><li class="chapter-item expanded "><a href="removing-disputes.html"><strong aria-hidden="true">39.</strong> Supprimer les litiges</a></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -117,9 +124,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -183,7 +190,7 @@
 </li>
 <li>
 <p>Trouvez des offres dans le canal <a href="https://t.me/p2plightning">@lnp2pbot Exchange</a>.</p>
-<p><img src="./assets/images/scan-channel.gif" alt="Recherche d'offres" /></p>
+<p><img src="./assets/images/scan-channel.gif" alt="Recherche d&#39;offres" /></p>
 </li>
 <li>
 <p>Commencez à acheter et à vendre.</p>
@@ -195,24 +202,24 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="faq"><a class="header" href="#faq">FAQ</a></h1>
 <p>Nous tentons ici de répondre aux questions les plus fréquentes.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="quest-ce-que-lnp2pbot-"><a class="header" href="#quest-ce-que-lnp2pbot-">Qu'est-ce que @lnp2pBot ?</a></h1>
-<p><strong>Lnp2pBot</strong> est un système d'échange de bitcoins contre des devises locales, pour effectuer des transactions de pair à pair faciles et sécurisées en utilisant le Lightning Network. Il s'agit d'un bot Telegram qui peut être utilisé de manière pseudonyme, sans vérification d'identité. Il s'agit d'un outil &quot;non-custodial&quot;, c'est-à-dire qu'il ne stocke pas de satoshis (unité minimale de bitcoin) pendant l'échange. <strong>Lnp2pBot</strong> est une application open source, qui peut être librement reproduite, modifiée et redistribuée. 
+<p><strong>Lnp2pBot</strong> est un système d'échange de bitcoins contre des devises locales, pour effectuer des transactions de pair à pair faciles et sécurisées en utilisant le Lightning Network. Il s'agit d'un bot Telegram qui peut être utilisé de manière pseudonyme, sans vérification d'identité. Il s'agit d'un outil "non-custodial", c'est-à-dire qu'il ne stocke pas de satoshis (unité minimale de bitcoin) pendant l'échange. <strong>Lnp2pBot</strong> est une application open source, qui peut être librement reproduite, modifiée et redistribuée.
 <a href="https://t.me/lnp2pbot">Aller à <strong>@lnp2pBot</strong></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="quest-ce-que-le-lightning-network-"><a class="header" href="#quest-ce-que-le-lightning-network-">Qu'est-ce que le Lightning Network ?</a></h1>
 <p><a href="https://youtu.be/XCSfoiD8wUA">Lighting Network</a> iest un réseau de canaux de paiement qui fonctionne comme un protocole de seconde couche sur le réseau Bitcoin, en tirant parti de la propriété d'écriture de contrats intelligents sur sa blockchain. Il s'agit d'une solution d'évolutivité qui permet d'augmenter de manière exponentielle le nombre de transactions et leur vitesse en se passant des confirmations sur la chaîne principale, tout en réduisant drastiquement les frais de réseau. Les paiements deviennent instantanés et ne coûtent presque rien.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="de-quoi-ai-je-besoin-pour-utiliser-lnp2pbot-"><a class="header" href="#de-quoi-ai-je-besoin-pour-utiliser-lnp2pbot-">De quoi ai-je besoin pour utiliser @lnp2pBot ?</a></h1>
-<p>Vous avez seulement besoin d'un compte Telegram avec le &quot; username &quot; activé pour initialiser le bot et interagir avec lui ; et un portefeuille qui supporte le Lighting Network, pour commencer à acheter et à vendre. [Nous laissons ici quelques portefeuilles recommandés] (https://lnp2pbot.com/learn/recommended-wallets.html)</p>
+<p>Vous avez seulement besoin d'un compte Telegram avec le " username " activé pour initialiser le bot et interagir avec lui ; et un portefeuille qui supporte le Lighting Network, pour commencer à acheter et à vendre. [Nous laissons ici quelques portefeuilles recommandés] (https://lnp2pbot.com/learn/recommended-wallets.html)</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comment-initialiser-le-bot-"><a class="header" href="#comment-initialiser-le-bot-">Comment initialiser le bot ?</a></h1>
-<p>Ouvrez le chat privé avec <a href="https://t.me/lnp2pbot">@lnp2pBot</a> et cliquez sur <strong>&quot;START &quot;</strong>, ou exécutez la commande <code>/start</code>.</p>
+<p>Ouvrez le chat privé avec <a href="https://t.me/lnp2pbot">@lnp2pBot</a> et cliquez sur <strong>"START "</strong>, ou exécutez la commande <code>/start</code>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="quels-sont-les-canaux-pour-faire-des-échanges-sur-telegram-"><a class="header" href="#quels-sont-les-canaux-pour-faire-des-échanges-sur-telegram-">Quels sont les canaux pour faire des échanges sur Telegram ?</a></h1>
-<p>Pour créer vos offres d'achat / vente, utilisez le chat avec <a href="https://t.me/lnp2pbot">@lnp2pBot</a>. </p>
+<p>Pour créer vos offres d'achat / vente, utilisez le chat avec <a href="https://t.me/lnp2pbot">@lnp2pBot</a>.</p>
 <p>Pour matcher des offres d'achat / vente, allez sur le canal <a href="https://t.me/p2plightning">@p2plightning</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="où-puis-je-trouver-des-offres-dans-ma-devise-locale-"><a class="header" href="#où-puis-je-trouver-des-offres-dans-ma-devise-locale-">Où puis-je trouver des offres dans ma devise locale ?</a></h1>
 <p>Vous pouvez le demander au robot en exécutant la commande <code>/findcomms</code> et le code de votre monnaie locale.</p>
 <p>Cela vous montrera les communautés de bolivars vénézuéliens :</p>
 <p><code>/findcomms</code> ves</p>
-<p>Vous pouvez également trouver cette commande et d'autres en cliquant sur le bouton &quot;Menu&quot;.</p>
+<p>Vous pouvez également trouver cette commande et d'autres en cliquant sur le bouton "Menu".</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dois-je-menregistrement-utilisateur-ou-effectuer-une-vérification-didentité-kyc"><a class="header" href="#dois-je-menregistrement-utilisateur-ou-effectuer-une-vérification-didentité-kyc">Dois-je m'enregistrement utilisateur ou effectuer une vérification d'identité (KYC)?</a></h1>
-<p>NON ! Bitcoin est un &quot;système de monnaie électronique de pair à pair&quot;, et nous sommes fiers de soutenir ce principe. Aucune information personnelle ne vous est demandée, les échanges se font entièrement entre pairs, et [@lnp2pBot] (https://t.me/lnp2pbot) ne collecte ni ne stocke aucune information personnelle.</p>
+<p>NON ! Bitcoin est un "système de monnaie électronique de pair à pair", et nous sommes fiers de soutenir ce principe. Aucune information personnelle ne vous est demandée, les échanges se font entièrement entre pairs, et [@lnp2pBot] (https://t.me/lnp2pbot) ne collecte ni ne stocke aucune information personnelle.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="quel-type-dinformation-recueillons-nous-auprès-de-chaque-utilisateur-"><a class="header" href="#quel-type-dinformation-recueillons-nous-auprès-de-chaque-utilisateur-">Quel type d'information recueillons-nous auprès de chaque utilisateur ?</a></h1>
 <p>Pour les besoins du système de réputation des utilisateurs, lnp2pBot recueille des statistiques sur vos transactions. Plus précisément, le nombre de transactions effectuées, le volume total échangé, la notation de la contrepartie et l'historique des litiges, le cas échéant. Parmi ces informations, seuls le nombre de transactions et la notation de la contrepartie sont publics par défaut. En revanche, l'affichage du volume total négocié et de votre nom d'utilisateur est facultatif (vous choisissez de l'afficher ou non, par défaut il n'est pas affiché).</p>
 <p>Si vous souhaitez afficher votre nom d'utilisateur et/ou le volume échangé pour accompagner votre réputation dans les offres que vous publiez, vous devez le faire manuellement à l'aide des commandes suivantes :</p>
@@ -220,20 +227,20 @@
 <p><code>/showvolume</code> yes</p>
 <p>Chaque commande est envoyée comme un message direct au bot.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comment-fonctionne-le-système-de-réputation-des-utilisateurs-"><a class="header" href="#comment-fonctionne-le-système-de-réputation-des-utilisateurs-">Comment fonctionne le système de réputation des utilisateurs ?</a></h1>
-<p>Pour chaque transaction que vous effectuez, il vous sera demandé d'évaluer votre contrepartie, tandis que celle-ci vous évaluera. Pour ce faire, <a href="https://t.me/lnp2pBot"><strong>lnp2pBot</strong></a> dispose d'un système d'évaluation à 5 étoiles qui vous permet d'évaluer votre expérience, 1 étoile étant la note la plus basse et 5 étoiles la plus haute. </p>
+<p>Pour chaque transaction que vous effectuez, il vous sera demandé d'évaluer votre contrepartie, tandis que celle-ci vous évaluera. Pour ce faire, <a href="https://t.me/lnp2pBot"><strong>lnp2pBot</strong></a> dispose d'un système d'évaluation à 5 étoiles qui vous permet d'évaluer votre expérience, 1 étoile étant la note la plus basse et 5 étoiles la plus haute.</p>
 <p>Lorsque vous créez une offre, elle inclura par défaut le nombre de transactions réussies que vous avez déjà effectuées et les évaluations obtenues de la part de vos contreparties.</p>
 <p><img src="./assets/images/reputation-system.jpg" alt="Système de réputation" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comment-créer-une-offre-de-vente-"><a class="header" href="#comment-créer-une-offre-de-vente-">Comment créer une offre de vente ?</a></h1>
-<p>Lorsque vous discutez avec <a href="https://t.me/lnp2pbot">@lnp2pBot</a>, vous trouverez un bouton &quot;Menu&quot;. Cliquez dessus pour afficher la liste des commandes que vous pouvez utiliser. Sélectionnez la commande de vente : <code>/sell</code>, pour activer l'assistant qui vous guidera à travers le processus de vente.</p>
+<p>Lorsque vous discutez avec <a href="https://t.me/lnp2pbot">@lnp2pBot</a>, vous trouverez un bouton "Menu". Cliquez dessus pour afficher la liste des commandes que vous pouvez utiliser. Sélectionnez la commande de vente : <code>/sell</code>, pour activer l'assistant qui vous guidera à travers le processus de vente.</p>
 <p><img src="./assets/images/sell-start.jpg" alt="Start the wizard" /></p>
 <p>Une fois activé, l'assistant vous demandera de spécifier la monnaie fiat dans laquelle vous souhaitez effectuer des transactions :</p>
 <p><img src="./assets/images/sell-fiat.jpg" alt="Fiat currency" /></p>
 <p>Ensuite, vous devez saisir le montant, en monnaie fiat, que vous souhaitez obtenir en échange de vos satoshis. N'oubliez pas de ne saisir que des chiffres à cette étape, afin que l'assistant puisse vous comprendre.</p>
 <p>Vous pouvez également saisir une fourchette de montants à acheter, en séparant les chiffres par un trait d'union (-).</p>
 <p><img src="./assets/images/amount.jpg" alt="Fiat Amount" /></p>
-<p>Le bot vous demandera le montant, en satoshis, que vous souhaitez vendre. Vous avez la possibilité d'utiliser le bouton &quot;Prix du marché&quot;. Si vous le faites, le taux de [Yadio. io] (https://yadio.io/) sera appliqué.</p>
+<p>Le bot vous demandera le montant, en satoshis, que vous souhaitez vendre. Vous avez la possibilité d'utiliser le bouton "Prix du marché". Si vous le faites, le taux de [Yadio. io] (https://yadio.io/) sera appliqué.</p>
 <p><img src="./assets/images/amount-sats-market-price.jpg" alt="Amount sats" /></p>
-<p>L'assistant vous demande ensuite le pourcentage de surcote ou de décote que vous souhaitez appliquer à votre opération. Si vous souhaitez vendre au-dessus du taux du marché (surcote), sélectionnez un nombre positif ; si vous souhaitez vendre en-dessous (décote), sélectionnez un nombre négatif. Si vous ne voulez ni l'un ni l'autre, utilisez le bouton &quot;Pas de surcote ou de décote&quot;.</p>
+<p>L'assistant vous demande ensuite le pourcentage de surcote ou de décote que vous souhaitez appliquer à votre opération. Si vous souhaitez vendre au-dessus du taux du marché (surcote), sélectionnez un nombre positif ; si vous souhaitez vendre en-dessous (décote), sélectionnez un nombre négatif. Si vous ne voulez ni l'un ni l'autre, utilisez le bouton "Pas de surcote ou de décote".</p>
 <p><img src="./assets/images/sell-prima.jpg" alt="Premium or discount" /></p>
 <p>Ensuite, vous devez spécifier le mode de paiement. Dans ce champ, vous pouvez faire preuve de créativité et ajouter des émoticônes ou tout autre élément susceptible de rendre votre demande attrayante.</p>
 <p>Le bot publiera votre offre dans le canal général ou communautaire que vous avez défini par défaut. Elle restera visible pendant 23 heures si personne ne l'accepte avant ce délai.</p>
@@ -249,18 +256,18 @@
 <p>L'échange est terminé. Vous pouvez maintenant évaluer votre contrepartie.</p>
 <p>Vous pouvez quitter l'assistant à tout moment en exécutant la commande <code>/exit</code>.</p>
 <p>Pour exécuter le même ordre de vente, sans utiliser l'assistant, vous devez taper votre ordre avec les informations suivantes : <code>/sell &lt;montant en sats&gt; &lt;montant en fiat&gt; &lt;code fiat&gt; &lt;mode de paiement&gt; [premium/discount]</code> (sans les caractères spéciaux).</p>
-<p>Exemple : <code>/sell 100000 20000 XOF &quot;Société Géniale Bank&quot;</code> Je vends 100.000 sats à 20.000 F que je reçois via Société Géniale Bank.</p>
+<p>Exemple : <code>/sell 100000 20000 XOF "Société Géniale Bank"</code> Je vends 100.000 sats à 20.000 F que je reçois via Société Géniale Bank.</p>
 <p>Si une variable n'est pas prise en charge, le robot vous l'indiquera au cours du processus de création de l'offre. Une fois terminé, l'ordre sera publié sur le canal d'échange et sera visible pendant une période de 23 heures.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comment-créer-une-offre-dachat-"><a class="header" href="#comment-créer-une-offre-dachat-">Comment créer une offre d'achat ?</a></h1>
-<p>La procédure est la même que pour l'offre de vente. Seulement, lorsque vous appuyez sur le bouton &quot;Menu&quot;, vous devez sélectionner la commande <code>/buy</code> au lieu de <code>/sell</code>. Cela activera l'assistant qui vous guidera tout au long du processus d'achat.</p>
+<p>La procédure est la même que pour l'offre de vente. Seulement, lorsque vous appuyez sur le bouton "Menu", vous devez sélectionner la commande <code>/buy</code> au lieu de <code>/sell</code>. Cela activera l'assistant qui vous guidera tout au long du processus d'achat.</p>
 <p>Une fois activé, l'assistant vous demandera de spécifier la monnaie fiat avec laquelle vous voulez négocier :</p>
 <p><img src="./assets/images/buy-fiat.jpg" alt="fiat currency" /></p>
 <p>Ensuite, vous devez saisir le montant, en monnaie fiat, que vous souhaitez acheter. N'oubliez pas de ne saisir que des chiffres à cette étape, afin que l'assistant puisse vous comprendre.</p>
 <p>Vous pouvez également saisir une fourchette de montants à acheter, en séparant les chiffres par un trait d'union (-).</p>
 <p><img src="./assets/images/buy-monto.jpg" alt="Amount in fiat" /></p>
-<p>L'assistant vous demandera le montant, en satoshis, que vous souhaitez recevoir. Vous pouvez utiliser le bouton &quot;Prix du marché&quot;. Dans ce cas, c'est le tarif de <a href="https://yadio.io/">Yadio.io</a> qui sera appliqué.</p>
+<p>L'assistant vous demandera le montant, en satoshis, que vous souhaitez recevoir. Vous pouvez utiliser le bouton "Prix du marché". Dans ce cas, c'est le tarif de <a href="https://yadio.io/">Yadio.io</a> qui sera appliqué.</p>
 <p><img src="./assets/images/buy-price.jpg" alt="Amount in satoshis" /></p>
-<p>L'assistant vous invite ensuite à indiquer le pourcentage de surcote ou de décote que vous souhaitez appliquer à votre échange. Si vous souhaitez vendre au dessus du taux de marché (surcote), sélectionnez un nombre positif ; si vous souhaitez vendre en dessous du taux de marché (décote), sélectionnez un nombre négatif. Si vous ne voulez ni l'un ni l'autre, utilisez le bouton &quot;Pas de surcote ou de décote&quot;.</p>
+<p>L'assistant vous invite ensuite à indiquer le pourcentage de surcote ou de décote que vous souhaitez appliquer à votre échange. Si vous souhaitez vendre au dessus du taux de marché (surcote), sélectionnez un nombre positif ; si vous souhaitez vendre en dessous du taux de marché (décote), sélectionnez un nombre négatif. Si vous ne voulez ni l'un ni l'autre, utilisez le bouton "Pas de surcote ou de décote".</p>
 <p><img src="./assets/images/buy-prima.jpg" alt="Premium or discount" /></p>
 <p>Ensuite, vous devez spécifier le mode de paiement. Dans ce champ, vous pouvez faire preuve de créativité et ajouter des émoticônes ou tout autre élément que vous jugez susceptible de rendre votre offre attrayante.</p>
 <p><img src="./assets/images/buy-payment-method.jpg" alt="Payment method" /></p>
@@ -270,25 +277,25 @@
 <p><img src="./assets/images/buy-cancel-order.jpg" alt="Cancel order" /></p>
 <p>L'assistant retournera un message confirmant l'annulation et votre offre sera supprimée du canal des offres.</p>
 <p><img src="./assets/images/buy-cancel.jpg" alt="Order cancelled" /></p>
-<p>Si votre offre est acceptée, l'assistant vous demandera de soumettre une facture à Lightning Network avec le montant correspondant en satoshis. Dans le même temps, il demandera à votre contrepartie de payer la facture. </p>
+<p>Si votre offre est acceptée, l'assistant vous demandera de soumettre une facture à Lightning Network avec le montant correspondant en satoshis. Dans le même temps, il demandera à votre contrepartie de payer la facture.</p>
 <p>À ce stade, le bot contactera les deux parties pour discuter des détails de l'échange.</p>
 <p>Une fois que vous avez effectué le paiement en fiats, informez le robot avec la commande <code>/fiatsent</code>. Le bot notifiera à votre contrepartie de vérifier la réception de l'argent, et procédera à la libération des satoshis. Rappelez-vous que votre portefeuille doit être en ligne pour recevoir les satoshis.</p>
 <p>L'échange est terminé. Vous pouvez maintenant évaluer votre contrepartie.</p>
 <p>Vous pouvez quitter l'assistant à tout moment en exécutant la commande <code>/exit</code>.</p>
 <p>Pour exécuter la même offre d'achat, sans utiliser l'assistant, vous devez écrire votre commande avec les détails : <code>/achat</code><montant en sats> <montant en fiat> <code fiat> <mode de paiement> [surcote/ décote] (sans les caractères spéciaux).</p>
-<p>Exemple : <code>/buy 100000 20000 XOF &quot;Société Géniale Bank&quot;</code>.</p>
+<p>Exemple : <code>/buy 100000 20000 XOF "Société Géniale Bank"</code>.</p>
 <p>J'achète 100.000 sats à 20.000 F, payés avec la banque Société Géniale Bank.</p>
 <p>Voici quelques exemples d'offres d'achat :</p>
 <ul>
-<li>Ex. <code>/buy 0 20000 &quot;Société Géniale Bank&quot;</code> : J'achète pour 20.000 F en sats - dans ce cas, le robot calculera au taux du marché - paiement via la banque Société Géniale Bank.</li>
-<li>Ex. <code>/buy 0 1000-20000 &quot;Mobile Money&quot;</code> : J'achète de 1.000 F à 20.000 F en sats - dans ce cas, le vendeur choisira le montant à vous vendre dans cette fourchette - par paiement mobile.</li>
-<li>Ex. <code>/buy 0 5000000 XOF &quot;Cash RDV Prima Mall 16h UTC&quot; +3</code> : J'achète 5.000.000 F avec une surcôte (premium) de 3 % - dans ce cas, le robot calculera au taux du marché en décotant le pourcentage que vous avez choisi - par paiement en cash sur rendez-vous au centre commercial Prima à 16h.</li>
+<li>Ex. <code>/buy 0 20000 "Société Géniale Bank"</code> : J'achète pour 20.000 F en sats - dans ce cas, le robot calculera au taux du marché - paiement via la banque Société Géniale Bank.</li>
+<li>Ex. <code>/buy 0 1000-20000 "Mobile Money"</code> : J'achète de 1.000 F à 20.000 F en sats - dans ce cas, le vendeur choisira le montant à vous vendre dans cette fourchette - par paiement mobile.</li>
+<li>Ex. <code>/buy 0 5000000 XOF "Cash RDV Prima Mall 16h UTC" +3</code> : J'achète 5.000.000 F avec une surcôte (premium) de 3 % - dans ce cas, le robot calculera au taux du marché en décotant le pourcentage que vous avez choisi - par paiement en cash sur rendez-vous au centre commercial Prima à 16h.</li>
 </ul>
 <p>S'il existe une variable non prise en charge, le bot vous l'indiquera au cours du processus de création de l'offre. Une fois terminé, l'offre sera automatiquement publiée sur le canal d'échange et sera visible pendant 23 heures.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comment-trouver-et-accepter-une-offre-dachat-ou-de-vente-"><a class="header" href="#comment-trouver-et-accepter-une-offre-dachat-ou-de-vente-">Comment trouver et accepter une offre d'achat ou de vente ?</a></h1>
-<p>Dans le canal <a href="https://t.me/p2plightning">@p2plightning</a> vous trouverez les offres de tous les participants, y compris la vôtre. Il vous suffit de faire défiler les offres jusqu'à ce que vous en trouviez une qui corresponde à votre recherche et de cliquer sur le bouton &quot;acheter des satoshis&quot; ou &quot;vendre des satoshis&quot;.</p>
+<p>Dans le canal <a href="https://t.me/p2plightning">@p2plightning</a> vous trouverez les offres de tous les participants, y compris la vôtre. Il vous suffit de faire défiler les offres jusqu'à ce que vous en trouviez une qui corresponde à votre recherche et de cliquer sur le bouton "acheter des satoshis" ou "vendre des satoshis".</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comment-annuler-une-offre-publiée-"><a class="header" href="#comment-annuler-une-offre-publiée-">Comment annuler une offre publiée ?</a></h1>
-<p>Si l'offre n'a pas encore été prise, utilisez la commande <code>/cancel</code> dans votre chat avec le bot ou sélectionnez-la dans le &quot;Menu&quot;. Le bot vous montrera les offres actives. Sélectionnez l'identifiant correspondant à l'offre que vous souhaitez annuler.</p>
+<p>Si l'offre n'a pas encore été prise, utilisez la commande <code>/cancel</code> dans votre chat avec le bot ou sélectionnez-la dans le "Menu". Le bot vous montrera les offres actives. Sélectionnez l'identifiant correspondant à l'offre que vous souhaitez annuler.</p>
 <p>Le numéro d'identification de votre commande apparaît juste en dessous du message d'acceptation et de publication, et il est même indiqué que vous avez la possibilité de l'annuler.</p>
 <p>Si l'offre a déjà été prise, vous devez initier une annulation coopérative.</p>
 <p><img src="./assets/images/cancel-order.gif" alt="Annuler un ordre" /></p>
@@ -301,10 +308,10 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="frais-et-commissions"><a class="header" href="#frais-et-commissions">Frais et commissions</a></h1>
 <p>Le bot facture un taux fixe de 0,6 %. Il inclut les frais de réseau, il n'y a donc pas de frais supplémentaires. Cette commission est payée uniquement par le vendeur, et non par l'acheteur.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="quel-taux-de-change-le-bot-utilise-t-il-"><a class="header" href="#quel-taux-de-change-le-bot-utilise-t-il-">Quel taux de change le bot utilise-t-il ?</a></h1>
-<p>Lorsque vous créez une offre, vous pouvez choisir de ne spécifier que la somme en fiat à <code>payer/facturer</code>, mais pas la somme en sats à <code>acheter/vendre</code>. Dans ce cas, vous devez sélectionner le bouton &quot;Prix du marché&quot;, et le bot calculera alors au taux du marché offert par <a href="https://yadio.io/">yadio.io</a>.</p>
+<p>Lorsque vous créez une offre, vous pouvez choisir de ne spécifier que la somme en fiat à <code>payer/facturer</code>, mais pas la somme en sats à <code>acheter/vendre</code>. Dans ce cas, vous devez sélectionner le bouton "Prix du marché", et le bot calculera alors au taux du marché offert par <a href="https://yadio.io/">yadio.io</a>.</p>
 <p><img src="./assets/images/market-price.gif" alt="prix du marché" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dans-quels-pays-et-dans-quelles-langues-est-il-disponible-"><a class="header" href="#dans-quels-pays-et-dans-quelles-langues-est-il-disponible-">Dans quels pays et dans quelles langues est-il disponible ?</a></h1>
-<p>Comme il s'agit d'un échange P2P sur Telegram, il est techniquement accessible à tous ceux qui possèdent l'application. Cependant, à ce jour, le robot peut obtenir le cours de 91 devises avec lesquelles vous pouvez créer des ordres d'achat/vente en utilisant le bouton &quot;prix de marché&quot; lors de la création d'une offre avec l'assistant.</p>
+<p>Comme il s'agit d'un échange P2P sur Telegram, il est techniquement accessible à tous ceux qui possèdent l'application. Cependant, à ce jour, le robot peut obtenir le cours de 91 devises avec lesquelles vous pouvez créer des ordres d'achat/vente en utilisant le bouton "prix de marché" lors de la création d'une offre avec l'assistant.</p>
 <p>Nous vous présentons ici la liste des devises :</p>
 <div class="table-wrapper"><table><thead><tr><th>Code</th><th>Name</th><th>Flag</th></tr></thead><tbody>
 <tr><td>AED</td><td>United Arab Emirates Dirham</td><td>🇦🇪</td></tr>
@@ -408,13 +415,26 @@
 <p>Dans l'image suivante, nous pouvons voir le résultat de <code>/findcomms usd</code>.</p>
 <p><img src="./assets/images/findcomms.jpg" alt="Find Community Capture" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="portefeuilles-recommandés"><a class="header" href="#portefeuilles-recommandés">Portefeuilles recommandés</a></h1>
-<p>Les portefeuilles suivants sont ceux qui ont montré de meilleures performances lorsqu'ils ont été testés avec le bot :</p>
+<p>Les portefeuilles suivants sont ceux qui ont montré de meilleures performances lorsqu'ils ont été testés avec le <a href="https://t.me/lnp2pBot">@lnp2pBot</a>:</p>
 <ul>
-<li><a href="https://www.walletofsatoshi.com/">Wallet of Satoshi</a></li>
 <li><a href="https://breez.technology/">Breez Wallet</a></li>
-<li><a href="https://phoenix.acinq.co/">Phoenix Wallet</a></li>
 <li><a href="https://blixtwallet.github.io/">Blixt Wallet</a></li>
-<li><a href="https://t.me/LightningTipBot">@LightningTipBot</a></li>
+<li><a href="https://phoenix.acinq.co/">Phoenix Wallet</a></li>
+</ul>
+<h4 id="remarques-sur-dautres-portefeuilles"><a class="header" href="#remarques-sur-dautres-portefeuilles">Remarques sur d'autres portefeuilles</a></h4>
+<ul>
+<li>
+<p>Avant de vendre des Sats en utilisant n'importe quel portefeuille du réseau Lightning (ou une plateforme d'échange), renseignez-vous pour savoir s'il prend en charge le paiement des hold invoices (le type de factures que le bot utilise comme garantie).</p>
+</li>
+<li>
+<p>Avec <code>Wallet of Satoshi</code>, vous pouvez recevoir les Sats d'un achat sans aucun problème. Cependant, si vous vendez des Sats et que la commande est annulée, le solde de votre portefeuille peut mettre du temps à se mettre à jour et les Sats peuvent ne pas être disponibles pendant plusieurs heures, même s'ils restent sur le nœud de WoS, car il met à jour le solde de ses utilisateurs à intervalles réguliers. Cela peut se produire avec tout autre service de garde, que ce soit des portefeuilles ou des plateformes d'échange autorisant les retraits sur le réseau Lightning.</p>
+</li>
+<li>
+<p>Il est courant que les paiements de <a href="https://t.me/lnp2pBot">@lnp2pBot</a> vers le portefeuille <code>Muun</code> échouent car le bot peut payer des frais de routage allant jusqu'à 0,2 % au maximum. Ainsi, il ne pourra pas payer la facture lorsque Muun facture des frais supérieurs à cela. Dans de tels cas, vous devez générer une nouvelle facture depuis un autre portefeuille (Plus d'informations <a href="./i-cant-receive.html">ici</a>). Il peut également arriver que vous vendiez des Sats depuis le portefeuille Muun et que la commande soit annulée. Dans tous les cas, des frais seront facturés car le portefeuille Muun n'est pas un portefeuille natif du réseau Lightning, mais fonctionne via des swaps sous-marins, et pour effectuer une transaction, vous devez payer les frais miniers même si la facture en attente du bot a été annulée.</p>
+</li>
+<li>
+<p>Dans <code>Aqua Wallet</code>, vous pouvez recevoir les Sats d'un achat sans aucun problème, mais malgré le fait qu'il s'agisse d'un portefeuille à auto-custody, si vous vendez des Sats et que la commande est annulée, le solde de votre portefeuille mettra du temps à se mettre à jour, parfois jusqu'à 48 heures, car ils ont activé cette période d'attente pour le remboursement de tout paiement échoué.</p>
+</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="assistance"><a class="header" href="#assistance">Assistance</a></h1>
 <p><a href="https://t.me/lnp2pbot">@lnp2pbot</a> n'est pas une entreprise, et n'a donc pas de service d'assistance technique, bien qu'il existe une communauté à laquelle vous pouvez vous adresser si vous avez besoin d'aide, rappelez-vous que les participants à cette communauté ne reçoivent aucun type de rémunération, si vous ne recevez pas de réponse immédiate, soyez patient et sachez que si quelqu'un a la réponse à un moment ou à un autre, il essaiera de vous aider.</p>
@@ -433,29 +453,29 @@
 <p>Lorsqu'une offre a le statut <code>PAID_HOLD_INVOICE</code>, le vendeur n'a plus aucune responsabilité car il a libéré les sats, si vous avez des problèmes de réception, allez à la section <a href="./i-cant-receive.html">Le vendeur a libéré mais je ne reçois pas les sats dans mon porte-monnaie</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="le-vendeur-a-libéré-les-sats-mais-je-ne-les-ai-pas-reçus-dans-mon-portefeuille"><a class="header" href="#le-vendeur-a-libéré-les-sats-mais-je-ne-les-ai-pas-reçus-dans-mon-portefeuille">Le vendeur a libéré les sats mais je ne les ai pas reçus dans mon portefeuille</a></h1>
 <p>Parfois le bot ne trouve pas d'itinéraire pour effectuer le paiement pour différentes raisons, parfois parce qu'il n'y a tout simplement pas de bonne connexion entre l'origine et la destination, mais d'autres fois c'est beaucoup plus compliqué, il peut arriver que les nœuds connectés à la destination facturent des frais très élevés, le nœud de @lnp2pBot est prêt à payer jusqu'à 0,15% du montant total de l'opération en frais de routage, si ces frais sont plus élevés, le bot n'effectuera tout simplement pas le paiement, certains portefeuilles qui ne sont pas natifs lightning peuvent facturer plus de 0,15% lorsque le mempool est encombré, ces portefeuilles ne seront pas en mesure d'être payés par le bot.</p>
-<p>Un autre cas est que vous n'avez pas de &quot;capacité d'entrée&quot;, je vais vous donner un exemple, si vous utilisez le portefeuille Blixt et que vous avez un canal que vous venez d'ouvrir, tout l'argent dans ce portefeuille serait sortant, vous n'avez pas la capacité de recevoir, dans ce cas tous les paiements vers ce portefeuille échoueront, il y a des portefeuilles modernes tels que le portefeuille Phoenix qui résout ce problème en indiquant que vous n'avez pas de capacité d'entrée et vous propose d'ouvrir un nouveau canal, ce portefeuille facture une commission pour cela.</p>
+<p>Un autre cas est que vous n'avez pas de "capacité d'entrée", je vais vous donner un exemple, si vous utilisez le portefeuille Blixt et que vous avez un canal que vous venez d'ouvrir, tout l'argent dans ce portefeuille serait sortant, vous n'avez pas la capacité de recevoir, dans ce cas tous les paiements vers ce portefeuille échoueront, il y a des portefeuilles modernes tels que le portefeuille Phoenix qui résout ce problème en indiquant que vous n'avez pas de capacité d'entrée et vous propose d'ouvrir un nouveau canal, ce portefeuille facture une commission pour cela.</p>
 <p>Comme solution <a href="./recommended-wallets.html">nous recommandons d'essayer différents portefeuilles</a>, générez de nouvelles factures et donnez-les au robot pour qu'il essaie de vous envoyer le paiement à nouveau.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="contact-avec-les-développeurs"><a class="header" href="#contact-avec-les-développeurs">Contact avec les développeurs</a></h1>
-<p>Si vous souhaitez contacter les développeurs, utilisez <a href="https://github.com/lnp2pbot/bot">notre GitHub</a>, si vous avez des propositions ou souhaitez signaler un bug, allez dans la section &quot;issues&quot; et créez-en un ticket.</p>
+<p>Si vous souhaitez contacter les développeurs, utilisez <a href="https://github.com/lnp2pbot/bot">notre GitHub</a>, si vous avez des propositions ou souhaitez signaler un bug, allez dans la section "issues" et créez-en un ticket.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="je-suis-un-développeur-et-je-veux-contribuer"><a class="header" href="#je-suis-un-développeur-et-je-veux-contribuer">Je suis un développeur et je veux contribuer</a></h1>
 <p>Superbe ! Merci pour ton intérêt, dans la section des problèmes tu verras une liste de problèmes à résoudre, choisis-en un avec l'étiquette <a href="https://github.com/lnp2pbot/bot/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">help wanted</a> et si tu as des doutes tu peux demander en faisant un commentaire puis si tu es sûr de vouloir le résoudre, commente-le, ceux avec l'étiquette <a href="https://github.com/lnp2pbot/bot/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issue</a> sont des problèmes simples qui t'aident souvent à te familiariser avec le code.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="communautés"><a class="header" href="#communautés">Communautés</a></h1>
 <p>Les communautés ont été conçues pour que les utilisateurs puissent échanger au sein de petits groupes, adaptés à leurs goûts et à leurs besoins.</p>
 <p>Les communautés peuvent être créées autour d'un projet, d'une devise ou d'un pays, par exemple.</p>
-<p>N'importe qui peut créer une communauté et interagir avec le bot qui en fait partie. &quot;Un grand pouvoir s'accompagne de grandes responsabilités&quot;. Ainsi, une fois que les utilisateurs commenceront à fonctionner dans leurs propres communautés, ils devront également gérer les litiges qui risquent de survenir.</p>
+<p>N'importe qui peut créer une communauté et interagir avec le bot qui en fait partie. "Un grand pouvoir s'accompagne de grandes responsabilités". Ainsi, une fois que les utilisateurs commenceront à fonctionner dans leurs propres communautés, ils devront également gérer les litiges qui risquent de survenir.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="la-confiance"><a class="header" href="#la-confiance">La confiance</a></h1>
-<p>Le modèle que nous avons choisi pour résoudre les litiges est celui de la confiance. Cela semble paradoxal pour ceux qui travaillent avec Bitcoin et qui prônent des systèmes &quot;sans confiance&quot;. En réalité, l'objectif est de développer des systèmes dans lesquels nous n'avons pas besoin de faire confiance à qui que ce soit. Mais après avoir longuement réfléchi aux systèmes de résolution des litiges, nous avons dû accepter le fait qu'il faut toujours faire confiance à quelqu'un, dans une certaine mesure.</p>
+<p>Le modèle que nous avons choisi pour résoudre les litiges est celui de la confiance. Cela semble paradoxal pour ceux qui travaillent avec Bitcoin et qui prônent des systèmes "sans confiance". En réalité, l'objectif est de développer des systèmes dans lesquels nous n'avons pas besoin de faire confiance à qui que ce soit. Mais après avoir longuement réfléchi aux systèmes de résolution des litiges, nous avons dû accepter le fait qu'il faut toujours faire confiance à quelqu'un, dans une certaine mesure.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dictateur-bienveillant"><a class="header" href="#dictateur-bienveillant">Dictateur bienveillant</a></h1>
-<p>Après avoir admis que pour résoudre un litige, il faut faire confiance à quelqu'un, nous nous sommes attachés à répondre à la question suivante : comment faire en sorte qu'il y ait moins d'incitations à créer des litiges ? À cet égard, la communauté a formulé plusieurs propositions. Celle que nous sommes en train de développer (parce qu'elle n'est pas encore prête au moment où nous écrivons ce texte) consiste à utiliser la figure du &quot;dictateur bienveillant&quot;. Il s'agit d'un &quot;dictateur&quot; que les gens acceptent et en qui ils ont confiance, car ses décisions sont prises pour le bien de la communauté. Disons qu'il s'agit d'un médiateur communautaire de confiance.</p>
-<p>Le dictateur bienveillant est le créateur de la communauté. Le dictateur bienveillant est celui qui peut ajouter des médiateurs de litiges ou &quot;solvers&quot;. Ceux-ci sont connus publiquement par la communauté (on parle de &quot;nom d'utilisateur&quot; dans Telegram). La communauté se chargera de signaler si ces utilisateurs font correctement leur travail ou non. Dans une communauté où le &quot;dictateur bienveillant&quot; sélectionne correctement les médiateurs, tout fonctionnera bien ; dans une communauté où le &quot;dictateur&quot; se trompe, ses sujets iront dans une autre communauté ou en créeront une nouvelle. Nous déléguons ainsi cette responsabilité aux communautés.</p>
+<p>Après avoir admis que pour résoudre un litige, il faut faire confiance à quelqu'un, nous nous sommes attachés à répondre à la question suivante : comment faire en sorte qu'il y ait moins d'incitations à créer des litiges ? À cet égard, la communauté a formulé plusieurs propositions. Celle que nous sommes en train de développer (parce qu'elle n'est pas encore prête au moment où nous écrivons ce texte) consiste à utiliser la figure du "dictateur bienveillant". Il s'agit d'un "dictateur" que les gens acceptent et en qui ils ont confiance, car ses décisions sont prises pour le bien de la communauté. Disons qu'il s'agit d'un médiateur communautaire de confiance.</p>
+<p>Le dictateur bienveillant est le créateur de la communauté. Le dictateur bienveillant est celui qui peut ajouter des médiateurs de litiges ou "solvers". Ceux-ci sont connus publiquement par la communauté (on parle de "nom d'utilisateur" dans Telegram). La communauté se chargera de signaler si ces utilisateurs font correctement leur travail ou non. Dans une communauté où le "dictateur bienveillant" sélectionne correctement les médiateurs, tout fonctionnera bien ; dans une communauté où le "dictateur" se trompe, ses sujets iront dans une autre communauté ou en créeront une nouvelle. Nous déléguons ainsi cette responsabilité aux communautés.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comment-créer-une-communauté-"><a class="header" href="#comment-créer-une-communauté-">Comment créer une communauté ?</a></h1>
 <p>Pour créer une communauté, tapez simplement la commande <code>/community</code>. Ensuite, le bot vous demandera d'indiquer les éléments suivants :</p>
 <ul>
 <li>Nom de la communauté : Un nom pour identifier votre communauté.</li>
-<li>Devises : Les monnaies fiat qui peuvent fonctionner dans la communauté. Elles doivent être saisies séparément d'un espace vide. Par exemple, pour une communauté ukrainienne, on peut ajouter &quot;UAH USD&quot;.</li>
+<li>Devises : Les monnaies fiat qui peuvent fonctionner dans la communauté. Elles doivent être saisies séparément d'un espace vide. Par exemple, pour une communauté ukrainienne, on peut ajouter "UAH USD".</li>
 <li>Groupe communautaire : Il s'agit du groupe principal où les membres de la communauté se rencontrent. Tant <a href="https://t.me/lnp2pbot">@lnp2pbot</a> que la personne qui crée la communauté doivent être administrateurs de ce groupe. Les utilisateurs pourront créer des offres en envoyant des commandes au bot dans ce groupe.</li>
 <li>Canal(s) du carnet d'ordres : Les offres seront publiés à l'endroit indiqué au bot. Si on indique un seul canal, les achats et les ventes seront publiés dans ce canal, mais si on indique deux canaux, les achats seront publiés dans le premier et les ventes dans le second. Les canaux sont saisis séparément avec un espace vide et le bot et le créateur de la communauté doivent tous deux être des administrateurs de canal.</li>
-<li>Médiateurs : Il faut indiquer les &quot;usernames&quot; des utilisateurs qui seront chargés de résoudre les litiges, séparés par un espace vide.</li>
+<li>Médiateurs : Il faut indiquer les "usernames" des utilisateurs qui seront chargés de résoudre les litiges, séparés par un espace vide.</li>
 <li>Canal pour les litiges : Dans ce canal, le bot publiera lorsqu'un utilisateur initiera un litige. Le bot et le créateur de la communauté doivent être administrateurs du canal.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modifier-une-communauté"><a class="header" href="#modifier-une-communauté">Modifier une communauté</a></h1>
@@ -468,7 +488,7 @@
 <p>Depuis sa création, <a href="https://t.me/lnp2pbot">@lnp2pbot</a> a facturé des frais au vendeur pour chaque transaction complétée, ces frais sont actuellement de 0.6%, maintenant, si la commande a été créée dans une communauté, le bot divise ces frais, une partie demeure pour le bot et l'autre partie sera au profit de la communauté.</p>
 <p>Les proportions sont de 70 % de la commission pour le bot et le reste pour la communauté.</p>
 <p>Ainsi, pour une transaction de 10 000 satoshis, les frais à payer par le vendeur s'élèvent à 60 satoshis. Sur ce montant, 42 satoshis reviennent au robot et le reste (18 satoshis) à la communauté.</p>
-<p>Mais, pour encourager la concurrence, la communauté a le pouvoir de réduire ses &quot;gains&quot;, de sorte qu'au lieu de facturer la totalité des 30 %, elle peut diminuer le pourcentage de ses commissions.</p>
+<p>Mais, pour encourager la concurrence, la communauté a le pouvoir de réduire ses "gains", de sorte qu'au lieu de facturer la totalité des 30 %, elle peut diminuer le pourcentage de ses commissions.</p>
 <p>Dans l'exemple ci-dessus, au lieu de facturer 18 satoshis (100 %), vous pouvez choisir de collecter 9 satoshis (50 %). Les satoshis restants constituent une remise pour le vendeur qui, au lieu de payer 60 satoshis, en paiera 51.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="quest-ce-quun-médiateur-"><a class="header" href="#quest-ce-quun-médiateur-">Qu'est-ce qu'un médiateur ?</a></h1>
 <p>Les médiateurs sont des utilisateurs nommés par l'administrateur de la communauté et sont chargés de résoudre les conflits et de maintenir l'ordre.</p>
